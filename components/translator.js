@@ -71,18 +71,6 @@ else{
     }
     return [tr,tr_hl];
   }
-  
-timeRepl(txt,dict,a,b){
-let timeRegex=/([0-9]|0[0-9]|1[0-9]|2[0-3])[\.|:][0-5][0-9]/g;
-let resu=this.transPhrase(txt,dict);
-let tst=resu[0].match(timeRegex);
-let tst_hl=resu[1].match(timeRegex);
-let repl=tst[0].replace(a,b);
-let repl_hl='<span class="highlight">'+tst_hl[0].replace(a,b)+'</span>';
-let erg=resu[0].replace(tst[0],repl);
-let erg_hl=resu[1].replace(tst_hl[0],repl_hl);
-return [erg,erg_hl];
-}
 
 genTrans(text,mode){
   let timeRegex=/([0-9]|0[0-9]|1[0-9]|2[0-3])[\.|:][0-5][0-9]/g;
